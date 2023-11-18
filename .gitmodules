@@ -1,3 +1,9 @@
 [submodule "gCSI_PharmacoSet-Pipeline"]
 	path = gCSI_PharmacoSet-Pipeline
 	url = https://github.com/jjjermiah/gCSI_PharmacoSet-Pipeline.git
+[submodule "GDSC_PharmacoSet-Pipeline"]
+	path = GDSC_PharmacoSet-Pipeline
+	url = https://github.com/jjjermiah/GDSC_PharmacoSet-Pipeline.git
+[submodule "CCLE_PharmacoSet-Pipeline"]
+	path = CCLE_PharmacoSet-Pipeline
+	url = https://github.com/jjjermiah/CCLE_PharmacoSet-Pipeline.git
