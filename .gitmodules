@@ -1,0 +1,3 @@
+[submodule "gCSI_PharmacoSet-Pipeline"]
+	path = gCSI_PharmacoSet-Pipeline
+	url = https://github.com/jjjermiah/gCSI_PharmacoSet-Pipeline.git
