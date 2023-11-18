@@ -5,5 +5,5 @@
 	path = GDSC_PharmacoSet-Pipeline
 	url = https://github.com/jjjermiah/GDSC_PharmacoSet-Pipeline.git
 [submodule "CCLE_PharmacoSet-Pipeline"]
-	path = CCLE_PharmacoSet-Pipeline
+	path = CCLE
 	url = https://github.com/jjjermiah/CCLE_PharmacoSet-Pipeline.git
