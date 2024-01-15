@@ -1,6 +1,8 @@
 from snakemake.remote.HTTP import RemoteProvider as HTTPRemoteProvider
 HTTP = HTTPRemoteProvider()
 import os
+from pathlib import Path
+
 # HOW TO USE
 # in a rule, set 
 # input:
@@ -11,13 +13,13 @@ import os
 # is available, regardless of how the rule is written
 
 def gencodeAnnotation(dirPath, ref_build, gencode_ver, species="human"):
-    return f"{dirPath}/{species}/{ref_build}_v{gencode_ver}/annotation.gtf"
+    return Path(f"{dirPath}/{species}/{ref_build}_v{gencode_ver}/annotation.gtf")
 
 def gencodeGenome(dirPath, ref_build, gencode_ver, species="human"):
-    return f"{dirPath}/{species}/{ref_build}_v{gencode_ver}/genome.fa"
+    return Path(f"{dirPath}/{species}/{ref_build}_v{gencode_ver}/genome.fa")
 
 def gencodeTranscriptome(dirPath, ref_build, gencode_ver, species="human"):
-    path = os.path.join(dirPath, species, f'{ref_build}_v{gencode_ver}', "transcriptome.fa")
+    path = Path(os.path.join(dirPath, species, f'{ref_build}_v{gencode_ver}', "transcriptome.fa"))
     return path
 
 
