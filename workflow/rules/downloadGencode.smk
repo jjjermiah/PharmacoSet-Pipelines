@@ -13,13 +13,6 @@ from pathlib import Path
 # is available, regardless of how the rule is written
 
 def gencodeAnnotation(dirPath, ref_build, gencode_ver, species="human"):
-    # return Path(f"{dirPath}/{species}/{ref_build}_v{gencode_ver}/annotation.gtf")
-    # return "{dirPath}/{species}/{ref_build}_v{gencode_ver}/annotation.gtf".format(
-    #     dirPath = dirPath,
-    #     species = species,
-    #     ref_build = ref_build,
-    #     gencode_ver = gencode_ver
-    # )
     return Path(dirPath) / species / f"{ref_build}_v{gencode_ver}" / "annotation.gtf"
 
 def gencodeGenome(dirPath, ref_build, gencode_ver, species="human"):
@@ -46,9 +39,9 @@ rule downloadAllGencode:
 def get_gencode_annotation(ref_build, gencode_release):
     if int(gencode_release) > 22:
         if ref_build == "GRCh37":
-            ftp = f"ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_{gencode_release}/GRCh37_mapping/gencode.v{gencode_release}lift37.annotation.gtf.gz"
+            ftp = "ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_{gencode_release}/GRCh37_mapping/gencode.v{gencode_release}lift37.annotation.gtf.gz".format()
         else:
-            ftp = f"ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_{gencode_release}/gencode.v{gencode_release}.annotation.gtf.gz" 
+            ftp = "ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_{gencode_release}/gencode.v{gencode_release}.annotation.gtf.gz".format()
     else:
         # if ref_build == "GRCh37":
             # print("GENCODE release 22 and below do not have GRCh37 mappings")
