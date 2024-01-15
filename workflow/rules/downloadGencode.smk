@@ -39,9 +39,9 @@ rule downloadAllGencode:
 def get_gencode_annotation(ref_build, gencode_release):
     if int(gencode_release) > 22:
         if ref_build == "GRCh37":
-            ftp = "ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_{gencode_release}/GRCh37_mapping/gencode.v{gencode_release}lift37.annotation.gtf.gz".format()
+            ftp = "ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_{gencode_release}/GRCh37_mapping/gencode.v{gencode_release}lift37.annotation.gtf.gz"
         else:
-            ftp = "ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_{gencode_release}/gencode.v{gencode_release}.annotation.gtf.gz".format()
+            ftp = "ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_{gencode_release}/gencode.v{gencode_release}.annotation.gtf.gz" 
     else:
         # if ref_build == "GRCh37":
             # print("GENCODE release 22 and below do not have GRCh37 mappings")
