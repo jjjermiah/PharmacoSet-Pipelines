@@ -13,7 +13,13 @@ from pathlib import Path
 # is available, regardless of how the rule is written
 
 def gencodeAnnotation(dirPath, ref_build, gencode_ver, species="human"):
-    return Path(f"{dirPath}/{species}/{ref_build}_v{gencode_ver}/annotation.gtf")
+    # return Path(f"{dirPath}/{species}/{ref_build}_v{gencode_ver}/annotation.gtf")
+    return "{dirPath}/{species}/{ref_build}_v{gencode_ver}/annotation.gtf".format(
+        dirPath = dirPath,
+        species = species,
+        ref_build = ref_build,
+        gencode_ver = gencode_ver
+    )
 
 def gencodeGenome(dirPath, ref_build, gencode_ver, species="human"):
     return Path(f"{dirPath}/{species}/{ref_build}_v{gencode_ver}/genome.fa")
