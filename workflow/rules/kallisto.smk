@@ -8,7 +8,10 @@ rule build_all_kallisto_indices:
     input:
         expand(
             "{ref_dir}/human/{ref_build}_v{ref_version}/transcriptome-kallisto_v{kallisto_version}.idx", 
-            ref_dir=refDir, ref_build=ref_build, ref_version=ref_version, kallisto_version=kallisto_version)
+            ref_dir=refDir,
+            ref_build=ref_build,
+            ref_version=ref_version,
+            kallisto_version=kallisto_version)
 
 rule kallisto_index:
     input:

@@ -15,7 +15,7 @@ include: "star.smk"
 include: "featureCounts.smk"
 include: "rsem.smk"
 
-rule kallisto:
+rule kallisto_run_all:
     input:
         expand(
             "results/rnaseq/kallisto_v{kallisto_version}_{ref_build}.{ref_version}/{sample}/", 
