@@ -23,3 +23,14 @@ gCSI/.snakemake/*
 */.snakemake
 
 */.RData
+
+workflow/depmap
+
+DEPMAP/rawdata/*
+DEPMAP/procdata/*
+DEPMAP/metadata/*
+DEPMAP/results/*
+DEPMAP/.snakemake/*
+DEPMAP/
+
+*.excalidraw
