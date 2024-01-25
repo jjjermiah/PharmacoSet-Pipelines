@@ -34,3 +34,5 @@ DEPMAP/.snakemake/*
 DEPMAP/
 
 *.excalidraw
+
+*/GCP-for-genomicworkflows/*
